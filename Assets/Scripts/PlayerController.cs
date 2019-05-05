@@ -8,7 +8,7 @@ public class PlayerController : NetworkBehaviour
 {
 
     [SerializeField]
-    private float speed = 5f;
+    private float speed = 200f;
     [SerializeField]
     private float lookSensitivity =5 ;
 
@@ -21,7 +21,9 @@ public class PlayerController : NetworkBehaviour
     void Start()
     {
         motor = GetComponent<PlayerMotor>();
-        
+
+  
+
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class PlayerController : NetworkBehaviour
         }
         else
         {
+            
             return;
         }
 
