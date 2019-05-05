@@ -4,34 +4,51 @@ using UnityEngine;
 
 public class scaleScript : MonoBehaviour
 {
-   
-    Transform trans;
+    float randomMapSize = 50;
+    float testMapStart = 2;
 
+    /// <summary>
+    ///  scale 50 plane start transform position -250 to 250
+    /// </summary>
+
+    Transform trans;
 
     // Start is called before the first frame update
     void Start()
     {
         trans = GetComponent<Transform>();
-        
-    }
+        trans.position = GetRandomStartPosition(testMapStart);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
+    }
 
     public void OnCollisionEnter(Collision collision)
     {
         if (trans.localScale.x > collision.collider.transform.localScale.x)
         {
             trans.localScale += collision.collider.transform.localScale;
+        }
+        else
+        {
+            // start over game over
+            trans.localScale = new Vector3(1, 1, 1);
+            //trans.position = new Vector3(rX, rY, rZ);
+
+            trans.position = GetRandomStartPosition(randomMapSize);
 
         }
 
-        trans.localScale += collision.collider.transform.localScale;
+    }
+
+    public Vector3 GetRandomStartPosition(float randomStart)
+    {
+        float rX = Random.Range(-randomStart, randomStart);
+        float rY = Random.Range(0, 2);
+        float rZ = Random.Range(-randomStart, randomStart);
+
+        return new Vector3(rX, rY, rX);
 
     }
+
 
 }
