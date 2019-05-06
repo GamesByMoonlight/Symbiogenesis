@@ -8,7 +8,7 @@ public class PlayerController : NetworkBehaviour
 {
 
     [SerializeField]
-    private float speed = 200f;
+    private float speed = 2000f;
     [SerializeField]
     private float lookSensitivity =5 ;
 
@@ -21,8 +21,6 @@ public class PlayerController : NetworkBehaviour
     void Start()
     {
         motor = GetComponent<PlayerMotor>();
-
-  
 
     }
 
@@ -49,6 +47,8 @@ public class PlayerController : NetworkBehaviour
 
         //final movement vector
          Vector3 _velocity = (_movHorizontal + _movVertical).normalized * speed;
+
+
 
         // apply motor
         motor.Move(_velocity);
