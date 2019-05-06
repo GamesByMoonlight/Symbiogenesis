@@ -7,6 +7,8 @@ public class scaleScript : MonoBehaviour
     float randomMapSize = 50;
     float testMapStart = 2;
 
+    public float resetScalesize = 1f;
+
     /// <summary>
     ///  scale 50 plane start transform position -250 to 250
     /// </summary>
@@ -17,9 +19,7 @@ public class scaleScript : MonoBehaviour
     void Start()
     {
         trans = GetComponent<Transform>();
-        trans.position = GetRandomStartPosition(testMapStart);
-
-
+       // trans.position = GetRandomStartPosition(testMapStart);
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -31,11 +31,10 @@ public class scaleScript : MonoBehaviour
         else
         {
             // start over game over
-            trans.localScale = new Vector3(1, 1, 1);
+            //trans.localScale = new Vector3(1, 1, 1);
+            trans.localScale = new Vector3(resetScalesize,resetScalesize ,resetScalesize );
             //trans.position = new Vector3(rX, rY, rZ);
-
             trans.position = GetRandomStartPosition(randomMapSize);
-
         }
 
     }
@@ -46,7 +45,7 @@ public class scaleScript : MonoBehaviour
         float rY = Random.Range(0, 2);
         float rZ = Random.Range(-randomStart, randomStart);
 
-        return new Vector3(rX, rY, rX);
+        return new Vector3(rX, rY, rZ);
 
     }
 

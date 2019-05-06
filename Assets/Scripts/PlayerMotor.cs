@@ -55,6 +55,10 @@ public class PlayerMotor : MonoBehaviour
         if (velocity != Vector3.zero)
         {
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+
+            //rb.AddForce(transform.forward * 5);
+            
+
         }
     }
    
