@@ -48,8 +48,6 @@ public class PlayerController : NetworkBehaviour
         //final movement vector
          Vector3 _velocity = (_movHorizontal + _movVertical).normalized * speed;
 
-
-
         // apply motor
         motor.Move(_velocity);
 
@@ -69,6 +67,12 @@ public class PlayerController : NetworkBehaviour
         // apply rotation
         motor.RotateCamera(_cameraRotation);
 
+        /// calculate thrust
+
+        if(Input.GetButton("Fire1"))
+        {
+            motor.addForce = true;
+        }
 
     }
 }
