@@ -12,7 +12,6 @@ public class PlayerMotor : MonoBehaviour
     private Vector3 cameraRotation = Vector3.zero;
 
 
-
     private Rigidbody rb;
 
     // Start is called before the first frame update
@@ -42,12 +41,15 @@ public class PlayerMotor : MonoBehaviour
         cameraRotation = _cameraRotation;
     }
 
+    public bool addForce { get; set; } = false;
 
 
     private void FixedUpdate()
     {
-        PerformMovement();
+       // PerformMovement();
         PerformRotation();
+
+
     }
 
     void PerformMovement()
@@ -70,6 +72,12 @@ public class PlayerMotor : MonoBehaviour
             cam.transform.Rotate(-cameraRotation);
         }
 
+        if( addForce == true)
+        {
+            rb.AddForce(transform.forward * 5);
+            
+        }
+        addForce = false;
 
     }
 
