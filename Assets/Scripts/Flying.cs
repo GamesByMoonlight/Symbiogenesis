@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Flying : MonoBehaviour
 {
-    public float movementSpeed = 100f;
-    public float resetSpeed = 100f ;
-    public float shiftSpeed = 150f;
-    public float controlSpeed = 50f;
-    public float horizontalSensitivity = 2f;
-    public float resetHorizontalSensitivity = 2f;
-    public float verticalSensitivity = 2f;
-    public float resetVerticalSensitivity = 2f;
+    public float movementSpeed = 20f;
+    public float resetSpeed = 20f ;
+    public float shiftSpeed = 50f;
+    public float controlSpeed = 20f;
+    public float horizontalSensitivity = 10f;
+    public float resetHorizontalSensitivity = 10f;
+    public float verticalSensitivity = 10f;
+    public float resetVerticalSensitivity = 10f;
 
     private float pitch = 0f;
     private float yaw = 0f;
@@ -22,11 +22,28 @@ public class Flying : MonoBehaviour
         Cursor.visible = false;
     }
 
+    private void FixedUpdate()
+    {
+
+        MoveFunc();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        yaw += horizontalSensitivity + Input.GetAxis("Mouse X");
-        pitch += verticalSensitivity + Input.GetAxis("Mouse Y");
+
+
+
+    }
+
+    public void MoveFunc()
+    {
+
+        yaw += horizontalSensitivity * Input.GetAxis("Mouse X");
+       pitch -= verticalSensitivity * Input.GetAxis("Mouse Y");
+
+        //yaw += horizontalSensitivity + Input.GetAxisRaw("Mouse X");
+        //pitch += verticalSensitivity + Input.GetAxisRaw("Mouse Y");
 
         transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
 
@@ -39,7 +56,7 @@ public class Flying : MonoBehaviour
             movementSpeed = resetSpeed;
         }
 
-        if(Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             transform.localPosition += transform.forward * Time.deltaTime * controlSpeed;
         }
@@ -60,10 +77,7 @@ public class Flying : MonoBehaviour
             transform.localPosition += transform.right * Time.deltaTime * controlSpeed;
         }
 
-
-
-
-
-
     }
+
+
 }
