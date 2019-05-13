@@ -8,10 +8,10 @@ public class Flying : MonoBehaviour
     public float resetSpeed = 20f ;
     public float shiftSpeed = 50f;
     public float controlSpeed = 20f;
-    public float horizontalSensitivity = 10f;
-    public float resetHorizontalSensitivity = 10f;
-    public float verticalSensitivity = 10f;
-    public float resetVerticalSensitivity = 10f;
+    public float horizontalSensitivity = 20f;
+    public float resetHorizontalSensitivity = 20f;
+    public float verticalSensitivity = 20f;
+    public float resetVerticalSensitivity = 20f;
 
     private float pitch = 0f;
     private float yaw = 0f;
