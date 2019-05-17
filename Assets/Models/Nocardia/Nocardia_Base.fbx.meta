@@ -3,7 +3,17 @@ guid: 9b9e24eaeb2f4c449bc24176a41029eb
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown_Nocardia
+    second: {fileID: 2100000, guid: 354710da90ddb5645887cd5786c835a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: fa9122e329f3f1542bcb26bb6cc03603, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

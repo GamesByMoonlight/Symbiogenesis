@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Flying : MonoBehaviour
+public class Flying : NetworkBehaviour
 {
-    public float movementSpeed = 20f;
-    public float resetSpeed = 20f ;
-    public float shiftSpeed = 50f;
-    public float controlSpeed = 20f;
-    public float horizontalSensitivity = 20f;
-    public float resetHorizontalSensitivity = 20f;
-    public float verticalSensitivity = 20f;
-    public float resetVerticalSensitivity = 20f;
+    public float movementSpeed = 5f;
+    public float resetSpeed = 5f ;
+    public float shiftSpeed = 5f;
+    public float controlSpeed = 10f;
+    public float horizontalSensitivity = 1f;
+    public float resetHorizontalSensitivity = 1f;
+    public float verticalSensitivity = 1f;
+    public float resetVerticalSensitivity = 1f;
 
     private float pitch = 0f;
     private float yaw = 0f;
@@ -25,12 +26,16 @@ public class Flying : MonoBehaviour
     private void FixedUpdate()
     {
 
-        MoveFunc();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isLocalPlayer)
+        {
+            MoveFunc();
+        }
 
 
 
