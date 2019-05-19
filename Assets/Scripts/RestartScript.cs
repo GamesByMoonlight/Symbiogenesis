@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 
 public class RestartScript : NetworkBehaviour { 
-    public int TotalSpawnedObjects =200;
+    public int TotalSpawnedObjects =20;
     public GameObject Cube1;
     public GameObject Sphere1;
     public GameObject Capsule1;

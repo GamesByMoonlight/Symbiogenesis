@@ -5,14 +5,14 @@ using UnityEngine.Networking;
 
 public class Flying : NetworkBehaviour
 {
-    public float movementSpeed = 5f;
-    public float resetSpeed = 5f ;
-    public float shiftSpeed = 5f;
-    public float controlSpeed = 10f;
-    public float horizontalSensitivity = 1f;
-    public float resetHorizontalSensitivity = 1f;
-    public float verticalSensitivity = 1f;
-    public float resetVerticalSensitivity = 1f;
+    public float movementSpeed = 10f;
+    public float resetSpeed = 10f ;
+    public float shiftSpeed = 50f;
+    public float controlSpeed = 20f;
+    public float horizontalSensitivity = .5f;
+    public float resetHorizontalSensitivity = .5f;
+    public float verticalSensitivity = .5f;
+    public float resetVerticalSensitivity = .5f;
 
     private float pitch = 0f;
     private float yaw = 0f;
