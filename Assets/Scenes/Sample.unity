@@ -520,10 +520,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalSpawnedObjects: 10
-  Cube1: {fileID: 1926347775447754225, guid: 10fe0f50a240b154f89b3f571c3308d8, type: 3}
-  Sphere1: {fileID: 9200506506452970597, guid: 2d40788dd3c372a4f8307eada3d52ab8, type: 3}
-  Capsule1: {fileID: 645152266097069313, guid: a7bd2a8dc2260bb4f9ef7e7ef17eb32f, type: 3}
-  Cylinder1: {fileID: 9084505544353675604, guid: 89f32560a3e471c4292be33376bc42aa,
+  Cube1: {fileID: 7176907927173803910, guid: bf408f117fcb6694dbc6d4f7207685ba, type: 3}
+  Sphere1: {fileID: 4118760565744546850, guid: df27f7551bb67e64d969e0eebcbf034b, type: 3}
+  Capsule1: {fileID: 3176964208923088851, guid: 7ffbc5104537f2e46a5e1a3071a3dd7e,
+    type: 3}
+  Cylinder1: {fileID: 8233783616036087115, guid: d7c2f0e06f6e1744eba6e6d15f525a74,
     type: 3}
 --- !u!1 &2036863278
 GameObject:

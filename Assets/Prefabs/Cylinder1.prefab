@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetScalesize: 1
+  resetScaleSizePlayer: 1.5
 --- !u!136 &5754791455661615424
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -145,6 +146,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BacillusCerus_GO
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005401558256705046, guid: 224bd55d4998ebc4588b5869afe51f84,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283062347269221381, guid: 224bd55d4998ebc4588b5869afe51f84,
         type: 3}
