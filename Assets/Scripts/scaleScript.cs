@@ -8,6 +8,7 @@ public class scaleScript : MonoBehaviour
     float testMapStart = 2;
 
     public float resetScalesize = 1f;
+    public float resetScaleSizePlayer = 1.5f;
 
     /// <summary>
     ///  scale 50 plane start transform position -250 to 250
@@ -24,44 +25,70 @@ public class scaleScript : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-
-        Debug.Log("collision");
-        Debug.Log(trans.name);
-        Debug.Log(collision.collider.name);
-
-        Debug.Log(trans.localScale.x + " " + collision.collider.transform.localScale.x);
-
-
-            if (trans.localScale.x > collision.collider.transform.localScale.x)
+        if (this.tag == "Virus")
         {
+            return;
+        }
+        if ( collision.collider.tag=="Virus")
+            {
+            trans.localScale = new Vector3(resetScaleSizePlayer, resetScaleSizePlayer, resetScaleSizePlayer);
+            trans.position = GetRandomStartPosition(randomMapSize);
+            return;
+
+        }
+
+
+        if (this.tag == "Food")
+        {
+            trans.localScale = new Vector3(resetScalesize, resetScalesize, resetScalesize);
+            trans.position = GetRandomStartPosition(randomMapSize);
+        }
+        if (collision.collider.tag == "Food")
+        {
+            collision.collider.transform.localScale = new Vector3( resetScalesize,resetScalesize, resetScalesize);
+            collision.collider.transform.position = GetRandomStartPosition(randomMapSize);
+
+        }
+
+
+
+        if (trans.localScale.x > collision.collider.transform.localScale.x)
+        {
+            // this grows
             trans.localScale += collision.collider.transform.localScale;
+
+            //collider gets reset
+            if(collision.collider.tag=="Player")
+            {
+                collision.collider.transform.localScale = new Vector3(resetScaleSizePlayer, resetScaleSizePlayer, resetScaleSizePlayer);
+                collision.collider.transform.position = GetRandomStartPosition(randomMapSize);
+            }
+
         }
         else
         {
-            Debug.Log(trans.name + "before " + trans.position.ToString());
+            // collider growss
+            // grow collider first because size changes...
+            collision.collider.transform.localScale += trans.localScale;
 
-            // start over game over
-            //trans.localScale = new Vector3(1, 1, 1);
+
+            // this gets reset
             trans.localScale = new Vector3(resetScalesize,resetScalesize ,resetScalesize );
-            //trans.position = new Vector3(rX, rY, rZ);
             trans.position = GetRandomStartPosition(randomMapSize);
 
-            Debug.Log(trans.name + " " + trans.position.ToString());
 
         }
-
-
-        Debug.Log("after calc");
-        Debug.Log(trans.localScale.x + " " + collision.collider.transform.localScale.x);
 
 
 
     }
 
+ 
+
     public Vector3 GetRandomStartPosition(float randomStart)
     {
         float rX = Random.Range(-randomStart, randomStart);
-        float rY = Random.Range(0, 2);
+        float rY = Random.Range(0, 20);
         float rZ = Random.Range(-randomStart, randomStart);
 
         return new Vector3(rX, rY, rZ);
