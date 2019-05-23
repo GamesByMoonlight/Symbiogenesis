@@ -5,6 +5,9 @@ using UnityEngine.Networking;
 
 public class Flying : NetworkBehaviour
 {
+
+    public GameObject playerCamera;
+
     public float movementSpeed = 10f;
     public float resetSpeed = 10f ;
     public float shiftSpeed = 50f;
@@ -17,8 +20,19 @@ public class Flying : NetworkBehaviour
     private float pitch = 0f;
     private float yaw = 0f;
 
+
     private void Start()
     {
+        if (isLocalPlayer == true)
+        {
+
+            //playerCamera.SetActive = true;
+        }
+        else
+        {
+            //playerCamera.SetActive = false;
+        }
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

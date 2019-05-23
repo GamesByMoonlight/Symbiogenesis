@@ -6,7 +6,9 @@ using UnityEngine.Networking;
 
 
 public class RestartScript : NetworkBehaviour { 
-    public int TotalSpawnedObjects =20;
+    public int TotalSpawnedObjects =10;  // multiply 4 gameobjects
+    /// 
+    /// </summary>
     public GameObject Cube1;
     public GameObject Sphere1;
     public GameObject Capsule1;
@@ -21,7 +23,9 @@ public class RestartScript : NetworkBehaviour {
     void Start()
     {
         //if (!isServer)
-        //{ return; }
+        //{
+        //    return;
+        //}
 
         for (int i = 0; i < TotalSpawnedObjects; i++)
         {
