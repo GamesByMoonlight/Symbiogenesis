@@ -279,7 +279,6 @@ MonoBehaviour:
   - {fileID: 8233783616036087115, guid: d7c2f0e06f6e1744eba6e6d15f525a74, type: 3}
   - {fileID: 4118760565744546850, guid: df27f7551bb67e64d969e0eebcbf034b, type: 3}
   - {fileID: 7176907927173803910, guid: bf408f117fcb6694dbc6d4f7207685ba, type: 3}
-  - {fileID: 2217982548710042426, guid: c1a14c9e88a6f0646b965f67aeae8334, type: 3}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:

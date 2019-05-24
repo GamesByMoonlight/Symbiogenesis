@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 [AddComponentMenu("Camera-Control/Mouse Orbit with zoom")]
-public class MouseOrbitImproved : MonoBehaviour
+public class MouseOrbitImproved : NetworkBehaviour
 {
 
     public Transform target;
@@ -24,6 +25,8 @@ public class MouseOrbitImproved : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+       
+
         Vector3 angles = transform.eulerAngles;
         x = angles.y;
         y = angles.x;
@@ -39,28 +42,33 @@ public class MouseOrbitImproved : MonoBehaviour
 
     void LateUpdate()
     {
-        if (target)
-        {
-            x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
-            y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+        //if (isLocalPlayer == true)
+        //{
+            if (target)
+            {
+                x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
+                y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
-            y = ClampAngle(y, yMinLimit, yMaxLimit);
+                y = ClampAngle(y, yMinLimit, yMaxLimit);
 
-            Quaternion rotation = Quaternion.Euler(y, x, 0);
+                Quaternion rotation = Quaternion.Euler(y, x, 0);
 
-            distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
+                distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
 
-            //RaycastHit hit;
-            //if (Physics.Linecast(target.position, transform.position, out hit))
-            //{
-            //    distance -= hit.distance;
-            //}
-            Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
-            Vector3 position = rotation * negDistance + target.position;
+                //RaycastHit hit;
+                //if (Physics.Linecast(target.position, transform.position, out hit))
+                //{
+                //    distance -= hit.distance;
+                //}
 
-            transform.rotation = rotation;
-            transform.position = position;
-        }
+                Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
+                Vector3 position = rotation * negDistance + target.position;
+
+                transform.rotation = rotation;
+                transform.position = position;
+            }
+
+        //}
     }
 
     public static float ClampAngle(float angle, float min, float max)
