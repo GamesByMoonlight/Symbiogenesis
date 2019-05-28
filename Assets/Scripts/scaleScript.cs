@@ -16,9 +16,12 @@ public class scaleScript : MonoBehaviour
 
     Transform trans;
 
+    public SoundManager soundManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        soundManager = FindObjectOfType<SoundManager>();
         trans = GetComponent<Transform>();
        // trans.position = GetRandomStartPosition(testMapStart);
     }
@@ -29,8 +32,12 @@ public class scaleScript : MonoBehaviour
         {
             return;
         }
+
         if ( collision.collider.tag=="Virus")
-            {
+        {
+            if (soundManager != null)
+             soundManager.ShrinkingSound(GetComponent<AudioSource>());
+
             trans.localScale = new Vector3(resetScaleSizePlayer, resetScaleSizePlayer, resetScaleSizePlayer);
             trans.position = GetRandomStartPosition(randomMapSize);
             return;
@@ -45,6 +52,8 @@ public class scaleScript : MonoBehaviour
         }
         if (collision.collider.tag == "Food")
         {
+            if (soundManager != null)
+                soundManager.GrowthSound(GetComponent<AudioSource>());
             collision.collider.transform.localScale = new Vector3( resetScalesize,resetScalesize, resetScalesize);
             collision.collider.transform.position = GetRandomStartPosition(randomMapSize);
 
