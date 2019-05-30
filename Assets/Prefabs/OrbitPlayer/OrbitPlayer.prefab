@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 6341278573659919331}
   - component: {fileID: -3502345562042925422}
   - component: {fileID: 5185694585332701692}
+  - component: {fileID: 2356878903998236189}
   m_Layer: 0
   m_Name: OrbitPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,6 +259,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a43a7481b225d45a77a031b02a0f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pname: Player
+--- !u!65 &2356878903998236189
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789165192580409034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6789165193234337340
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +288,7 @@ GameObject:
   - component: {fileID: 6789165193234337335}
   m_Layer: 0
   m_Name: PlayerGameObject
-  m_TagString: Untagged
+  m_TagString: colliderTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -347,7 +362,7 @@ BoxCollider:
   m_GameObject: {fileID: 6789165193234337340}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -641,6 +656,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6789165193234337328}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 7049ce656e182bd4f86cfd7d203ec22e,
+        type: 3}
+      propertyPath: m_Name
+      value: MoleculePlayer
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7049ce656e182bd4f86cfd7d203ec22e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -710,11 +730,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 7049ce656e182bd4f86cfd7d203ec22e,
-        type: 3}
-      propertyPath: m_Name
-      value: MoleculePlayer
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 7049ce656e182bd4f86cfd7d203ec22e,
         type: 3}
