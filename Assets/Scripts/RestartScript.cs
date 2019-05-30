@@ -13,6 +13,7 @@ public class RestartScript : NetworkBehaviour {
     public GameObject Sphere1;
     public GameObject Capsule1;
     public GameObject Cylinder1;
+    public GameObject Virus;
 
     float randomMapSize = 200f;
     float rs = 200f;
@@ -33,11 +34,15 @@ public class RestartScript : NetworkBehaviour {
            var s1 =  Instantiate(Sphere1, GetRandomStartPosition1(randomMapSize), Quaternion.identity);
            var cp1 =  Instantiate(Capsule1, GetRandomStartPosition1(randomMapSize), Quaternion.identity);
            var cy1 = Instantiate(Cylinder1,  GetRandomStartPosition1(randomMapSize), Quaternion.identity);
+           var vir = Instantiate(Virus, GetRandomStartPosition1(randomMapSize), Quaternion.identity);
+
 
             NetworkServer.Spawn(c1);
             NetworkServer.Spawn(s1);
             NetworkServer.Spawn(cp1);
             NetworkServer.Spawn(cy1);
+            NetworkServer.Spawn(vir);
+
 
 
         }
