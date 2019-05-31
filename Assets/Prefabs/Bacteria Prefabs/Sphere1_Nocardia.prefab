@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 8000317517470860096}
   - component: {fileID: 2337898644197209792}
   m_Layer: 0
-  m_Name: Cube1_Nocardia
-  m_TagString: Virus
+  m_Name: Sphere1_Nocardia
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetScalesize: 5
   resetScaleSizePlayer: 1.5
+  soundManager: {fileID: 0}
 --- !u!114 &9221965022709656684
 MonoBehaviour:
   m_ObjectHideFlags: 0
