@@ -15,7 +15,7 @@ public class MouseOrbitImproved : NetworkBehaviour
     public float yMaxLimit = 80f;
 
     public float distanceMin = .5f;
-    public float distanceMax = 15f;
+    public float distanceMax = 25f;
 
     private Rigidbody rigidbody;
 
