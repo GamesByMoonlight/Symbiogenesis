@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Food
   - Virus
+  - colliderTag
   layers:
   - Default
   - TransparentFX

@@ -49,7 +49,7 @@ public class Movement : NetworkBehaviour
         rBody.MovePosition(transform.position + movementV);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //Debug.Log("Hello inside Update");
         //Debug.Log(isLocalPlayer);
