@@ -12,8 +12,8 @@ public class Movement : NetworkBehaviour
 
     void Start()
     {
-        Debug.Log("HI");
-        Debug.Log(isLocalPlayer);
+        //Debug.Log("HI");
+        //Debug.Log(isLocalPlayer);
 
         if (isLocalPlayer == true)
         {
