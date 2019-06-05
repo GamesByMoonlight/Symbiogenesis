@@ -8,6 +8,8 @@ public class PlayerNameScript : NetworkBehaviour
     [SyncVar]
     public string pname = "Player";
 
+
+
     public void OnGUI()
     {
         //if (isLocalPlayer)
