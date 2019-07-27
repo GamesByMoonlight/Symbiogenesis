@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3957090920561478781}
   - component: {fileID: 6040634995260008148}
   - component: {fileID: 7170360212622658294}
+  - component: {fileID: -7375477508058959473}
   - component: {fileID: 8107538535512444827}
   m_Layer: 0
   m_Name: Capsule1_Staphacoccus
@@ -166,6 +167,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetScalesize: 1
   resetScaleSizePlayer: 1.5
+  soundManager: {fileID: 0}
+  PlayerSizeReset: 0
+  PlayerSizeGrow: 0
+--- !u!114 &-7375477508058959473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3176964208923088851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98afae9efc90453409bc7d2b5b8718ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomWaitTime: 1
+  rig: {fileID: 0}
+  speed: 0
+  newMovement: {x: 0, y: 0, z: 0}
 --- !u!54 &8107538535512444827
 Rigidbody:
   m_ObjectHideFlags: 0

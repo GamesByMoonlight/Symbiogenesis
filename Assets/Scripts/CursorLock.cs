@@ -7,7 +7,7 @@ public class CursorLock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        CursorUnlockFalse();
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class CursorLock : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            CursorUnlock();
+            CursorUnlockFalse();
         }
         if (Input.GetMouseButtonDown(2))
         {

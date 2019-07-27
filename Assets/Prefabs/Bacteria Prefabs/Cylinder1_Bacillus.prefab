@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3914848839401881771}
   - component: {fileID: 7175852900982243538}
   - component: {fileID: 2878467062940213702}
+  - component: {fileID: -4603376531118750371}
   - component: {fileID: 5615845498051928710}
   - component: {fileID: 5579886343928028650}
   - component: {fileID: 5680928068861163060}
@@ -111,6 +112,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetScalesize: 1
   resetScaleSizePlayer: 1.5
+  soundManager: {fileID: 0}
+  PlayerSizeReset: 0
+  PlayerSizeGrow: 0
+--- !u!114 &-4603376531118750371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8233783616036087115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98afae9efc90453409bc7d2b5b8718ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomWaitTime: 1
+  rig: {fileID: 0}
+  speed: 0
+  newMovement: {x: 0, y: 0, z: 0}
 --- !u!114 &5615845498051928710
 MonoBehaviour:
   m_ObjectHideFlags: 0
