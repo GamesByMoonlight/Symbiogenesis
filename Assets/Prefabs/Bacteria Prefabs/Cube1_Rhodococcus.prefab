@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7176907927173803904}
   - component: {fileID: 7176907927173803911}
   - component: {fileID: -6078501816635437195}
+  - component: {fileID: -3151780540187405292}
   m_Layer: 0
   m_Name: Cube1_Rhodococcus
   m_TagString: Food
@@ -165,6 +166,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetScalesize: 1
   resetScaleSizePlayer: 1.5
+  soundManager: {fileID: 0}
+  PlayerSizeReset: 0
+  PlayerSizeGrow: 0
 --- !u!54 &-6078501816635437195
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -181,6 +185,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3151780540187405292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176907927173803910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98afae9efc90453409bc7d2b5b8718ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomWaitTime: 1
+  rig: {fileID: 0}
+  speed: 0
+  newMovement: {x: 0, y: 0, z: 0}
 --- !u!1001 &7176907927507133541
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -3502345562042925422}
   - component: {fileID: 5185694585332701692}
   - component: {fileID: 2356878903998236189}
+  - component: {fileID: -8128349707727218824}
   m_Layer: 0
   m_Name: OrbitPlayer
   m_TagString: Player
@@ -127,6 +128,8 @@ MonoBehaviour:
   resetScalesize: 1
   resetScaleSizePlayer: 1.5
   soundManager: {fileID: 0}
+  PlayerSizeReset: 0
+  PlayerSizeGrow: 0
 --- !u!54 &7553887254048605289
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -254,7 +257,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6789165192580409034}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64a43a7481b225d45a77a031b02a0f6f, type: 3}
   m_Name: 
@@ -273,6 +276,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-8128349707727218824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789165192580409034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35e779789ebeb4499b498c6e2ec0772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6789165193234337340
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +450,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 0.7952632, g: 1, b: 0, a: 1}
-      key1: {r: 0.7952632, g: 1, b: 0, a: 1}
+      key1: {r: 0, g: 0.66267204, b: 1, a: 1}
       key2: {r: 1, g: 1, b: 1, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 1}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -443,7 +458,7 @@ TrailRenderer:
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 9638
+      ctime1: 59560
       ctime2: 65535
       ctime3: 0
       ctime4: 0
@@ -585,6 +600,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128880202702106257, guid: 24e150ffe07d9ac4385d48980cc4aa56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6857776871587839023, guid: 24e150ffe07d9ac4385d48980cc4aa56,
         type: 3}
